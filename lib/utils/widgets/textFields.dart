@@ -1,12 +1,8 @@
-import 'package:country_code_picker/country_code.dart';
-import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 import '../colors_constants/colors.dart';
 import '../helpers/styles.dart';
-
 
 class CustomizedTextField_DropDown extends StatelessWidget {
   String hintText;
@@ -168,20 +164,19 @@ class searchTextField extends StatelessWidget {
                       textChanged(text);
                     },
                     decoration: InputDecoration(
+                      hoverColor: Colors.transparent,
                       // suffixIconColor: blackTextColor,
                       border: InputBorder.none,
                       filled: true,
                       fillColor: boxGreyColor,
                       hintText: hintText,
                       prefixIcon: IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.search)),
+                          onPressed: () {}, icon: Icon(Icons.search)),
                     )),
               );
             }),
           ),
         ),
-
       ],
     );
   }
@@ -190,6 +185,5 @@ class searchTextField extends StatelessWidget {
 class dropDownItem<T> {
   final String title;
   final T? data;
-  dropDownItem({required this.title,required this.data});
+  dropDownItem({required this.title, required this.data});
 }
-
